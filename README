@@ -30,6 +30,8 @@ check the outputs in target directory structure and war file with name devops.wa
 build the docker image with docker build command ( you can see dockerfile in present working directory)
 docker build -t image-name:version .
 
+docker rm -f `docker ps -aq`
+
 Run a container from the image
 docker run -d -p 8081:8080 --name mycontainer image-name:version    {8080 port is taken by jenkins}
 
